@@ -1,2 +1,4 @@
-package org.launchcode;public class HashMapPractice {
+package org.launchcode;
+
+public class HashMapPractice {
 }

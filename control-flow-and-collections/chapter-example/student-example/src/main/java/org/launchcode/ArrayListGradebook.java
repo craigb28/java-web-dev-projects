@@ -20,7 +20,7 @@ public class ArrayListGradebook {
                 students.add(newStudent);
             }
 
-        } while(!newStudent.equals(""));
+        } while (!newStudent.equals(""));
 
         // Get student grades
         for (String student : students) {
