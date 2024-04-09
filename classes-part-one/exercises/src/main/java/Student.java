@@ -1,19 +1,23 @@
 public class Student {
     private String name;
     private int studentId;
-    private int numberOfCredits = 0;
+    private int numberOfCredits = 0; // has a default value, since the numberOfCredits might not be applicable
     private double gpa = 0.0;
 
     // Drop your getters and setters below for the Student class.
     // To instantiate the Student class, add your code to the main in the file, SchoolPractice.
-// Setters
 
-    public void setName(String aName) {
-        this.name = aName;
+    // Constructor
+    public Student(String name, int studentId, int numberOfCredits, double gpa) {
+        this.name = name;
+        this.studentId = studentId;
+        this.numberOfCredits = numberOfCredits;
+        this.gpa = gpa;
     }
 
-    public void setStudentID(int aStudentId) {
-        this.studentId = aStudentId;
+    // Setters
+    public void setName(String aName) {
+        this.name = aName;
     }
 
     public void setNumberOfCredits(int aNumberOfCredits) {
