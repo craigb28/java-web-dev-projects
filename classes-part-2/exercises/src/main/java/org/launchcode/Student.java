@@ -8,7 +8,7 @@ public class Student {
     private int numberOfCredits = 0;
     private double gpa = 0.0;
 
-    public Student (String name, int studentId, int numberOfCredits, double gpa) {
+    public Student(String name, int studentId, int numberOfCredits, double gpa) {
         this.name = name;
         this.studentId = studentId;
         this.numberOfCredits = numberOfCredits;
@@ -30,20 +30,53 @@ public class Student {
 
 
     //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
-//        // Determine the grade level of the student based on numberOfCredits
-//    }
+    public String getGradeLevel(int credits) {
+        if (credits <= 29) {
+            return "freshman";
+        } else if (credits <= 59) {
+            return "sophomore";
+        } else if (credits <= 89) {
+            return "junior";
+        } else {
+            return "senior";
+        }
+    }
 
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
+        double totalQualityScore = this.gpa * this.numberOfCredits;
+        totalQualityScore += courseCredits * grade;
+        this.numberOfCredits += courseCredits;
+        this.gpa = totalQualityScore / this.numberOfCredits;
     }
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
     //  than just the class fields.
 
+    public String toString() {
+        String studentReport = String.format("%s is a %s with %d credits and a GPA of %.2f", this.name, this.getGradeLevel(this.numberOfCredits), this.getNumberOfCredits(), this.getGpa());
+        return studentReport;
+    }
+
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Student objects equal.
+    public boolean equals(Object toBeCompared) {
+        if (toBeCompared == this) {
+            return true;
+        }
+
+        if (toBeCompared == null) {
+            return false;
+        }
+
+        if (toBeCompared.getClass() != getClass()) {
+            return false;
+        }
+
+        Student theStudent = (Student) toBeCompared;
+        return theStudent.getStudentId() == getStudentId();
+    }
 
     public String getName() {
         return name;
@@ -78,7 +111,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Student sally = new Student("Sally",1,1,4.0);
+        Student sally = new Student("Sally", 1, 1, 4.0);
         System.out.println("The Student class works! " + sally.getName() + " is a student!");
         System.out.println(sally);
         sally.addGrade(12, 3.5);
