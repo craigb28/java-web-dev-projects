@@ -1,5 +1,7 @@
 package org.launchcode;
 
+import java.util.Objects;
+
 public class Student {
 
     private static int nextStudentId = 1;
@@ -77,7 +79,6 @@ public class Student {
         Student theStudent = (Student) toBeCompared;
         return theStudent.getStudentId() == getStudentId();
     }
-
     public String getName() {
         return name;
     }

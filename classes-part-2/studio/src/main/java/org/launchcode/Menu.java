@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Menu {
     private Date lastUpdated;
-    private ArrayList<MenuItem> items;
+    public ArrayList<MenuItem> items = new ArrayList<>();
 
     public Menu(Date d, ArrayList<MenuItem> i) {
         this.lastUpdated = d;
@@ -16,8 +16,12 @@ public class Menu {
         this.lastUpdated = lastUpdated;
     }
 
-    public void setItems(ArrayList<MenuItem> items) {
-        this.items = items;
+//    public void setItems(ArrayList<MenuItem> items) {
+//        this.items = items;
+//    }
+
+    public void removeItems(MenuItem item) {
+        items.remove(item);
     }
 
     public Date getLastUpdated() {
@@ -27,6 +31,14 @@ public class Menu {
     public ArrayList<MenuItem> getItems() {
         return items;
     }
+
+    public void printMenuArrayToString(ArrayList<MenuItem> items)
+    {
+        System.out.println("Name: " + name + "\n" + "Price: $" + price + "\n" + "Description: " + description + "\n" + "Category: " + category);
+    }
+
+
+
 }
 
 

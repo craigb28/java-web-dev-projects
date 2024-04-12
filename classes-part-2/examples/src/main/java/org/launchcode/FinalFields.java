@@ -3,7 +3,6 @@ package org.launchcode;
 //This code will not run - that is intentional. This is to help you explore access modifiers and fields
 
 //TODO: remove the /* (line 7) and */ (line 36) to explore the code
-
 /*
 public class FinalFields {
     public final int intValue = 42;
@@ -33,4 +32,4 @@ public class FinalFields {
         demo.objectValue.intValue = 6;
     }
 }
-*/
+    */
