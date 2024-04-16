@@ -14,10 +14,10 @@ class CarTest {
     }
 
     //TODO: add emptyTest so we can configure our runtime environment
-    @Test
-    public void emptyTest() {
-        assertEquals(10, 10, .001);
-    }
+//    @Test
+//    public void emptyTest() {
+//        assertEquals(10, 10, .001);
+//    }
 
     //TODO: constructor sets gasTankLevel properly
     @Test
