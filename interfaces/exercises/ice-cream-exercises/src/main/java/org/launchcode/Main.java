@@ -12,18 +12,18 @@ public class Main {
 
 // TODO: Use a Comparator class to sort the 'flavors' array alphabetically by the 'name' field.
 
-//        Comparator<Flavor> comparator = new FlavorComparator();
-//        flavors.sort(comparator);
+        Comparator<Flavor> comparator = new FlavorComparator();
+        flavors.sort(comparator);
 
         flavors.sort(new FlavorComparator());
 
         System.out.println(flavors);
         // TODO: Use a Comparator class to sort the 'cones' array in increasing order by the 'cost' field.
 
-//Comparator<Cone> coneComparator = new ConeComparator();
-//cones.sort(coneComparator);
-//
-//        System.out.println(cones);
+        Comparator<Cone> coneComparator = new ConeComparator();
+        cones.sort(coneComparator);
+
+        System.out.println(cones);
 
         // TODO: Print the 'flavors' and 'cones' lists (in a clear manner) to verify the sorting.
 
@@ -31,8 +31,10 @@ public class Main {
         toppings.sort(toppingComparator);
 
         System.out.println(toppings);
-//
-//        System.out.println(cones);
 
+        System.out.println(cones);
+        for (Flavor flavor : flavors) {
+            System.out.println(flavor.getName());
+        }
     }
 }
